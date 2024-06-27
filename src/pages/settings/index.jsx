@@ -3,7 +3,7 @@ import { IoSettings } from "react-icons/io5";
 
 const SettingsPage = () => {
   return (
-    <div className="sm:h-[75vh] h-[80vh]">
+    <div className="sm:h-[74vh] h-[80vh]">
       <StatMenu text={"Back to Dashboard"} />
       <h2 className="font-bold text-3xl py-5">Settings</h2>
       <div className="p-4 bg-blue-200 rounded-lg flex flex-col items-center justify-center h-full">
