@@ -10,7 +10,7 @@ export default function SignUp() {
     <>
       <BlueBox
         text={"Sign Up"}
-        styler={"sm:bottom-[28rem] md:bottom-[33rem] bottom-[34rem]"}
+        styler={"sm:bottom-[28rem] md:bottom-[31rem] bottom-[34rem]"}
       />
       <Form method="post">
         <fieldset>

@@ -8,14 +8,6 @@ export async function action({ request, params }) {
   return redirect("/auth");
 }
 
-export async function loginAction({ request, params }) {
-  const formData = await request.formData();
-  const updates = Object.fromEntries(formData);
-
-  addUser(updates);
-  return redirect("/");
-}
-
 const addUser = (data) => {
   const storeUserData = () => {
     const storedUsers = JSON.parse(localStorage.getItem("Users")) || [];
@@ -25,3 +17,11 @@ const addUser = (data) => {
 
   storeUserData();
 };
+
+export async function loginAction({ request, params }) {
+  const formData = await request.formData();
+  const updates = Object.fromEntries(formData);
+
+  addUser(updates);
+  return redirect("/");
+}

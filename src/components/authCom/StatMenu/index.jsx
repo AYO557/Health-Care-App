@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const StatMenu = ({ text, icon = true }) => {
   return (
-    <header className="flex justify-between items-center">
+    <header className="flex justify-between items-center sm:h-[5vh]">
       <Link to={icon === "auth" ? "/auth" : "/"}>
         <div className="font-semibold hover:text-blue-400 flex items-center gap-2">
           <IoMdArrowRoundBack size={20} />

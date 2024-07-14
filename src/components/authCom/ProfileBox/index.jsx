@@ -17,7 +17,7 @@ const ProfileBox = () => {
             <h2 className="font-bold text-xl">AY Code</h2>
             <p className="text-lg">
               <em>Age:</em> 30
-            </p>
+            </p> 
             <button
               type="button"
               className="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded-lg"

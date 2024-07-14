@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <StatMenu icon={"auth"} text={"Back to Login"} />
       <h2 className="font-bold text-3xl py-5">Current Appointment</h2>
-      <div className="flex flex-col sm:flex-row items-center gap-3 px-4 sm:h-[30.5rem]">
+      <div className="flex flex-col sm:flex-row gap-3 px-4 sm:h-[78vh]">
         <div className="w-full sm:w-[30%] sm:h-full flex flex-col gap-3">
           <ProfileBox />
           <InfoBox />

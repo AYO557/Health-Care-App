@@ -24,7 +24,7 @@ const InputSpace = ({ icon, type = "text", placeholder, name }) => {
       <div className="border-b-2 py-3 flex items-center gap-2">
         {icon}
         <input
-          className="h-7 w-full outline-none"
+          className="h-5 w-full outline-none"
           type={inputType}
           name={name}
           id=""

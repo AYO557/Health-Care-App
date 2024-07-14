@@ -27,7 +27,7 @@ const HealthDetailsForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-blue-200 h-full p-4 rounded shadow w-full"
+      className="bg-blue-200 h-full p-4 rounded-lg w-full"
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="flex flex-col">
@@ -70,7 +70,9 @@ const HealthDetailsForm = () => {
             className="p-2 border rounded"
             required
           >
-            <option value="">Select Gender</option>
+            <option selected disabled value="">
+              Select Gender
+            </option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>

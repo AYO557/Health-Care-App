@@ -26,7 +26,7 @@ const prescriptions = [
 
 const Prescriptions = () => {
   return (
-    <div className="bg-blue-200 w-full sm:h-full rounded-xl p-4">
+    <div className="bg-blue-200 w-full rounded-xl p-4">
       <h2 className="font-bold text-xl mb-4">Prescriptions</h2>
       <ul className="space-y-4">
         {prescriptions.map((prescription) => (
