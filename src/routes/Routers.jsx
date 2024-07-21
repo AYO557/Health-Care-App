@@ -6,10 +6,9 @@ import ForgotPassword from "../pages/forgotPassword";
 import { action as registerAction, loginAction } from "../database";
 import Home from "../pages/home";
 import Authenticated from "../layouts/Authenticated";
-import AppointmentPage from "../pages/appointment";
-import NotificationPage from "../pages/notifications";
 import DoctorPage from "../pages/DoctorPage";
-import SettingsPage from "../pages/settings";
+import Appointments from "../pages/appointmentsPage";
+import App from "../pages/App";
 
 const Routers = () => {
   const router = createBrowserRouter([
@@ -23,19 +22,15 @@ const Routers = () => {
         },
         {
           path: "appointment",
-          element: <AppointmentPage />,
-        },
-        {
-          path: "notifications",
-          element: <NotificationPage />,
+          element: <Appointments />,
         },
         {
           path: "doctor",
           element: <DoctorPage />,
         },
         {
-          path: "settings",
-          element: <SettingsPage />,
+          path: "approach",
+          element: <App />,
         },
       ],
     },

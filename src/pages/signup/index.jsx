@@ -18,45 +18,45 @@ export default function SignUp() {
             <InputSpace
               name={"firstName"}
               placeholder={"Firstname"}
-              icon={<FaUser size={20} color="blue" />}
+              icon={<FaUser size={20} color="green" />}
             />
             <InputSpace
               placeholder={"Lastname"}
-              //   icon={<FaUser size={20} color="blue" />}
+              //   icon={<FaUser size={20} color="green" />}
             />
           </div>
           <InputSpace
             name={"lastName"}
             placeholder={"Username"}
-            icon={<FaUser size={20} color="blue" />}
+            icon={<FaUser size={20} color="green" />}
           />
           <InputSpace
             name={"email"}
             placeholder={"Email"}
             type={"email"}
-            icon={<FaEnvelope size={20} color="blue" />}
+            icon={<FaEnvelope size={20} color="green" />}
           />
           <InputSpace
             name={"password"}
             placeholder={"Password"}
             type={"password"}
-            icon={<FaLock size={20} color="blue" />}
+            icon={<FaLock size={20} color="green" />}
           />
           <InputSpace
             name={"confirmPassword"}
             placeholder={"Confirm Password"}
             type={"password"}
-            icon={<FaLock size={20} color="blue" />}
+            icon={<FaLock size={20} color="green" />}
           />
         </fieldset>
-        <fieldset className="flex items-center justify-between px-1 py-3 text-blue-600 font-medium">
+        <fieldset className="flex items-center justify-between px-1 py-3 text-green-600 font-medium">
           <Button text={"Sign Up"} />
         </fieldset>
       </Form>
       <div className="text-center text-sm py-3">
         <p>
           Already have an account?{" "}
-          <Link to="/auth" className="font-medium text-blue-600">
+          <Link to="/auth" className="font-medium text-green-600">
             Login
           </Link>
         </p>

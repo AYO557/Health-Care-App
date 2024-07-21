@@ -16,7 +16,7 @@ const Unauthenticated = () => {
   };
 
   return (
-    <main style={mainStyle}>
+    <main style={mainStyle} className="overflow-hidden">
       <article className="bg-white opacity-95 py-5 rounded-lg w-full max-w-md m-auto pt-20 px-5 relative sm:w-[80%] md:w-[60%] lg:w-[40%] xl:w-[28%]">
         <Outlet />
       </article>
