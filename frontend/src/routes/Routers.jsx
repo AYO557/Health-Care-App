@@ -28,10 +28,10 @@ const Routers = () => {
           path: "doctor",
           element: <DoctorPage />,
         },
-        {
-          path: "approach",
-          element: <App />,
-        },
+        // {
+        //   path: "approach",
+        //   element: <App />,
+        // },
       ],
     },
     {

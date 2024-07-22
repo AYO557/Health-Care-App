@@ -1,4 +1,4 @@
-import { FaArrowAltCircleDown, FaClock, FaUser } from "react-icons/fa";
+import { FaClock, FaUser } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -22,12 +22,6 @@ const NavBox = () => {
       icon: <FaClock size={30} />,
       title: "Recommendations",
       path: "/appointment",
-      exact: true,
-    },
-    {
-      icon: <FaArrowAltCircleDown size={30} />,
-      title: "More",
-      path: "/approach",
       exact: true,
     },
   ];

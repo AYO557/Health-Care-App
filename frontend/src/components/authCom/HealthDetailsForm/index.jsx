@@ -1,11 +1,8 @@
 import React, { useState, useContext } from "react";
 import { SharedContext } from "../../../SharedContext";
 import axios from "axios";
-import toast from "react-hot-toast";
-import { Navigate, useNavigate } from "react-router-dom";
 
 const HealthDetailsForm = () => {
-  const navigate = useNavigate();
   const { setSharedData } = useContext(SharedContext);
   const [formData, setFormData] = useState({
     name: "",
@@ -44,25 +41,15 @@ const HealthDetailsForm = () => {
         );
         const recommendationsData = response.data;
         setSharedData(recommendationsData);
-        toast(
-          "Recommendations sent successfully! check your recommendations page",
-          {
-            style: { fontWeight: "bold", color: "green" },
-          }
+        alert(
+          "Recommendations sent successfully! check your recommendations page"
         );
-        navigate("/appointment");
         console.log(recommendationsData);
+        // setRecommendations(recommendationsData); // Assuming you have a state to store recommendations
       } catch (error) {
         console.error("Error fetching recommendations data", error);
-        toast(
-          "Sorry, we couldn't find a recommendation for you. Please try again",
-          {
-            style: {
-              fontWeight: "bold",
-              color: "red",
-              backgroundColor: "yellowgreen",
-            },
-          }
+        alert(
+          "Sorry, we couldn't find a recommendation for you. Please try again"
         );
       }
     }

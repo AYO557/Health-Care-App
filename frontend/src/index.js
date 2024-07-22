@@ -4,14 +4,12 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Routers from "./routes/Routers";
 import { SharedProvider } from "./SharedContext";
-import { Toaster } from "react-hot-toast";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <SharedProvider>
     <React.StrictMode>
       <Routers />
-      <Toaster />
     </React.StrictMode>
   </SharedProvider>
 );
