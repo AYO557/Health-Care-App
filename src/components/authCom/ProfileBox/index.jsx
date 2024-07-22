@@ -1,5 +1,6 @@
 import React from "react";
 import catpfp from "../../../assets/Images/cat-pfp.jpeg";
+import { Link } from "react-router-dom";
 
 const ProfileBox = () => {
   return (
@@ -13,17 +14,14 @@ const ProfileBox = () => {
               alt="cat profile pic"
             />
           </div>
-          <div className="flex flex-col items-center gap-1">
-            <h2 className="font-bold text-xl">AY Code</h2>
-            <p className="text-lg">
-              <em>Age:</em> 30
+          <div>
+            <p className="font-bold p-2">
+              Welcome user, Your health is our priority, please visit our{" "}
+              <Link className="underline" to={"/doctor"}>
+                Doctor page
+              </Link>{" "}
+              to get started.
             </p>
-            <button
-              type="button"
-              className="bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded-lg"
-            >
-              Update
-            </button>
           </div>
         </div>
       </div>

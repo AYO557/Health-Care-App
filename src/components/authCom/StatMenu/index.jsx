@@ -17,7 +17,6 @@ const StatMenu = ({ text, icon = true }) => {
           <FaBell className="hidden sm:block hover:text-green-400" size={20} />
         </Link>
         <FaRegImage size={20} className="ml-auto" />
-        <h2 className="hidden sm:block">AY Code</h2>
         <IoIosArrowDropdown
           className="hidden sm:block"
           size={20}
