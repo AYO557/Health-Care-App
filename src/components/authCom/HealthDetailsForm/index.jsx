@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { SharedContext } from "../../../SharedContext";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HealthDetailsForm = () => {
   const navigate = useNavigate();
@@ -19,6 +19,7 @@ const HealthDetailsForm = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    console.log(formData);
   };
 
   const data = {
@@ -44,12 +45,9 @@ const HealthDetailsForm = () => {
         );
         const recommendationsData = response.data;
         setSharedData(recommendationsData);
-        toast(
-          "Recommendations sent successfully! check your recommendations page",
-          {
-            style: { fontWeight: "bold", color: "green" },
-          }
-        );
+        toast("Recommendations sent successfully!", {
+          style: { fontWeight: "bold", color: "green" },
+        });
         navigate("/appointment");
         console.log(recommendationsData);
       } catch (error) {

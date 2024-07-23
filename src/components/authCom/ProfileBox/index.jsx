@@ -1,5 +1,5 @@
 import React from "react";
-import catpfp from "../../../assets/Images/cat-pfp.jpeg";
+import catpfp from "../../../assets/Images/cat-pfp.jpg";
 import { Link } from "react-router-dom";
 
 const ProfileBox = () => {
