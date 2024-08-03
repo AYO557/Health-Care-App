@@ -28,12 +28,12 @@ export default function Login() {
           </div>
         </fieldset>
         <fieldset className="flex items-center justify-between px-1 py-3 text-green-600 font-medium">
-          <button
+          <Link
             className="bg-green-600 px-10 py-3 font-semibold text-white rounded-md shadow-xl"
-            type="submit"
+            to={"/"}
           >
             Log in
-          </button>
+          </Link>
           <p>
             <Link to="forgotPassword">Forgot Password?</Link>
           </p>

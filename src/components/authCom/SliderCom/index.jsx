@@ -1,5 +1,4 @@
 import React from "react";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import oranges from "../../../assets/Images/oranges.jpg";
@@ -10,21 +9,10 @@ import strawberry from "../../../assets/Images/strawberry.jpg";
 import berries from "../../../assets/Images/berries.jpg";
 import apples from "../../../assets/Images/apples.jpg";
 import bananas from "../../../assets/Images/bananas.jpg";
-// import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-
-// SwiperCore.use([Autoplay]);
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
 
 const fruitDetails = [
   {
@@ -65,20 +53,6 @@ const SliderCom = () => {
   console.log(fruitDetails[0].image);
   return (
     <div className="w-full sm:w-[98%] mx-auto">
-      {/* <Slider {...settings}>
-        {fruitDetails.map((fruit, index) => (
-          <div key={index} className="h-[70vh] relatives">
-            <img
-              src={fruit.image}
-              alt=""
-              className="h-full w-full rounded object-cover"
-            />
-            <p className="bg-black text-blue-200 bg-opacity-50 p-4 rounded absolute top-0 w-full">
-              {fruit.tip}
-            </p>
-          </div>
-        ))}
-      </Slider> */}
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
@@ -90,7 +64,7 @@ const SliderCom = () => {
       >
         {fruitDetails.map((fruit, index) => (
           <SwiperSlide key={index} className="relatives">
-            <div className="h-[220px] lg:h-[430px]">
+            <div className="h-[220px] sm:h-[430px]">
               <img
                 src={fruit.image}
                 alt=""

@@ -20,10 +20,7 @@ export default function SignUp() {
               placeholder={"Firstname"}
               icon={<FaUser size={20} color="green" />}
             />
-            <InputSpace
-              placeholder={"Lastname"}
-              //   icon={<FaUser size={20} color="green" />}
-            />
+            <InputSpace placeholder={"Lastname"} />
           </div>
           <InputSpace
             name={"lastName"}

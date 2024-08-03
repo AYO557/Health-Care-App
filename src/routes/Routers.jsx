@@ -6,8 +6,6 @@ import ForgotPassword from "../pages/forgotPassword";
 import { action as registerAction, loginAction } from "../database";
 import Home from "../pages/home";
 import Authenticated from "../layouts/Authenticated";
-import DoctorPage from "../pages/DoctorPage";
-import Appointments from "../pages/appointmentsPage";
 import App from "../pages/App";
 
 const Routers = () => {
@@ -21,15 +19,7 @@ const Routers = () => {
           element: <Home />,
         },
         {
-          path: "appointment",
-          element: <Appointments />,
-        },
-        {
-          path: "doctor",
-          element: <DoctorPage />,
-        },
-        {
-          path: "approach",
+          path: "app",
           element: <App />,
         },
       ],

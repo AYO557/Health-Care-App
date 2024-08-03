@@ -12,7 +12,7 @@ const AppointmentsForm = () => {
     health_objectives: "",
   });
 
-  const [recommendations, setRecommendations] = useState({});
+  const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -26,30 +26,26 @@ const AppointmentsForm = () => {
     e.preventDefault();
     setLoading(true);
     const data = {
-      age: formData.age,
-      gender:
-        formData.gender.charAt(0).toUpperCase() + formData.gender.slice(1),
-      health_condition:
-        formData.health_condition.charAt(0).toUpperCase() +
-        formData.health_condition.slice(1),
-      //   Disliked_Foods: `['${formData.disliked_foods
-      //     .split(",")
-      //     .map((food) => food.trim())
-      //     .join("','")}']`,
-      //   Health_Objectives:
-      //     formData.health_objectives.charAt(0).toUpperCase() +
-      //     formData.health_objectives.slice(1),
+      Disliked_Foods: `['${formData.disliked_foods
+        .split(",")
+        .map((food) => food.trim())
+        .join("','")}']`,
+      Health_Objectives:
+        formData.health_objectives.charAt(0).toUpperCase() +
+        formData.health_objectives.slice(1),
     };
-    console.log(data);
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/predict", data, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      setRecommendations(response.data);
-      console.log(recommendations);
+      const response = await axios.post(
+        "https://health-new.onrender.com/recommended",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      setRecommendations(response.data.recommended_foods);
       toast.success("Recommendations fetched successfully!", {
         style: { fontWeight: "bold", color: "green" },
       });
@@ -180,18 +176,16 @@ const AppointmentsForm = () => {
           {loading ? "Loading..." : "Submit"}
         </button>
       </form>
-      {Object.keys(recommendations).length > 0 && (
+      {recommendations.length > 0 && (
         <div className="mt-4 bg-white shadow-lg rounded-md p-4">
-          <h2 className="text-xl font-semibold mb-2">
-            Recommended Fruits and Vegetables
-          </h2>
+          <h2 className="text-xl font-semibold mb-2">Recommended Fruits</h2>
           <ul className="list-disc pl-5">
-            <li>{recommendations.recommended_fruit}</li>
-            <li>{recommendations.recommended_vegetable}</li>
+            {recommendations.map((fruit, index) => (
+              <li key={index}>{fruit}</li>
+            ))}
           </ul>
         </div>
       )}
-
       <section className="mt-4 bg-white shadow-lg rounded-md p-4">
         <h2 className="text-xl font-semibold mb-2">Health Tips</h2>
         <ul className="list-disc pl-5">

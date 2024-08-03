@@ -17,7 +17,7 @@ const ProfileBox = () => {
           <div>
             <p className="font-bold p-2">
               Welcome user, Your health is our priority, please visit our{" "}
-              <Link className="underline" to={"/doctor"}>
+              <Link className="underline" to={"/app"}>
                 Doctor page
               </Link>{" "}
               to get started.

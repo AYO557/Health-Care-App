@@ -13,7 +13,7 @@ const StatMenu = ({ text, icon = true }) => {
         </div>
       </Link>
       <div className="flex items-center gap-3 font-bold">
-        <Link to={"/appointment"}>
+        <Link to={"/app"}>
           <FaBell className="hidden sm:block hover:text-green-400" size={20} />
         </Link>
         <FaRegImage size={20} className="ml-auto" />
